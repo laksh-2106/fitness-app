@@ -60,6 +60,14 @@ export const LiveActivity = (props?: ActivityProps) => {
     }
   };
 
+  const handleCardPress = () => {
+    if (props?.buttonText === 'Start Run') {
+      didTapActivityButton('begin');
+    } else if (props?.buttonText === 'View' || props?.buttonText === 'Past Runs' || props?.buttonText === 'Top Workout') {
+      didTapActivityButton('view');
+    }
+  };
+
   return (
     <View
       style={{
@@ -98,7 +106,7 @@ export const LiveActivity = (props?: ActivityProps) => {
             </Text>
           </View>
         ) : (
-          <Pressable onPress={() => {}}>
+          <Pressable onPress={handleCardPress}>
             <Text
               style={{
                 fontSize: 38,

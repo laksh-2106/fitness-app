@@ -107,7 +107,11 @@ export const Home = () => {
       }}>
       {
         <Steps
-          lastFourDaysSteps={[6000, 9000, 1000, 10000, 11000, 2000, 5000]}
+          lastFourDaysSteps={
+            user?.lastFourDaysSteps?.length
+              ? user.lastFourDaysSteps
+              : [6000, 9000, 1000, 10000, 11000, 2000, 5000]
+          }
           maxSteps={user?.oneDayMaxSteps}
         />
       }

@@ -121,7 +121,7 @@ export const Login = (props: LoginProps) => {
             dispatch({type: 'SET_PASSWORD', payload: {password: e}});
           }}
         />
-        {state.error ? <Text style={{color: ''}}>{state.error}</Text> : null}
+        {state.error ? <Text style={{color: '#4adf7e'}}>{state.error}</Text> : null}
         <Pressable
           style={styles.signupButton}
           onPress={() => {
